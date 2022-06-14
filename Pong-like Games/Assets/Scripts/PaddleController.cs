@@ -36,6 +36,7 @@ public class PaddleController : MonoBehaviour
         {
             // ke atas
             return Vector2.up * speed;
+            ;
         }
         else if (Input.GetKey(downKey))
         {
@@ -48,6 +49,8 @@ public class PaddleController : MonoBehaviour
 
     private void MoveObject(Vector2 movement)
     {
+        Debug.Log("TEST: " + movement);
+        Debug.Log("Speed: " + speed);
         rig.velocity = movement;
     }
 }
